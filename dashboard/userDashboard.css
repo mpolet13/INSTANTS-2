@@ -42,11 +42,18 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    display: block;
+    display: flex;
+    align-items: center; /* Center the icon and text vertically */
     padding: 10px 20px; /* Adjust padding to fit your design */
-    text-align: center;
     width: 100%; /* Ensure the link spans the full width of the sidebar */
     box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Add styles for icons */
+nav ul li a img {
+    width: 24px; /* Adjust icon size if needed */
+    height: 24px; /* Adjust icon size if needed */
+    margin-right: 10px; /* Space between icon and text */
 }
 
 /* Highlight the active link in the sidebar */

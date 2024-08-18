@@ -3,49 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Home</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="userDashboard.css">
 </head>
 <body>
     <div class="sidebar">
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <a href="../index.html"><img  src="image/logo.png" alt="Logo"></a> <!-- Replace with your logo path -->
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
-                <li><a href="transactions.html" class="nav-link" data-section="transactions">Transactions</a></li>
-                <li><a href="settings.html" class="nav-link" data-section="settings">Settings</a></li>
-                <li><a href="support.html" class="nav-link" data-section="support">Support</a></li>
+                <li><a href="#" class="active"><img src="image/home.png" alt="Home Icon"> Home</a></li> <!-- Replace with your icons -->
+                <li><a href="#"><img src="image/transaction.png" alt="Transactions Icon"> Transactions</a></li>
+                <li><a href="#"><img src="image/setting.png" alt="Settings Icon"> Settings</a></li>
+                <!-- Add more sections as needed -->
             </ul>
         </nav>
     </div>
     <div class="main-content">
         <header>
-            <h1>Welcome, [User/Admin Name]</h1>
+            <h1>Dashboard</h1>
             <button class="logout-btn">Logout</button>
         </header>
-        <section id="home">
-            <div class="section-header">
-                <img src="home-icon.png" alt="Home Icon">
-                <h2>Overview</h2>
+        <div class="section-header">
+            <img src="path/to/home-icon.png" alt="Home Icon"> <!-- Replace with your section icons -->
+            <h2>Home</h2>
+        </div>
+        <div class="overview">
+            <div class="card">
+                <h3>Overview</h3>
+                <ul>
+                    <li>Transaction 1: $100</li>
+                    <li>Transaction 2: $200</li>
+                    <li>Transaction 3: $300</li>
+                </ul>
             </div>
-            <div class="overview">
-                <div class="card">
-                    <h3>Balances</h3>
-                    <p>$1200</p>
-                </div>
-                <div class="card">
-                    <h3>Recent Transactions</h3>
-                    <ul>
-                        <li>Transaction 1: $50</li>
-                        <li>Transaction 2: $75</li>
-                        <li>Transaction 3: $100</li>
-                    </ul>
-                </div>
+            <div class="card">
+                <h3>Recent Transactions</h3>
+                <ul>
+                    <li>Transaction A: $50</li>
+                    <li>Transaction B: $150</li>
+                    <li>Transaction C: $250</li>
+                </ul>
             </div>
-        </section>
+        </div>
     </div>
-    <script src="dashboard.js"></script>
+    <script src="dashboard.js"></script> <!-- Add this line to include the script -->
 </body>
 </html>
