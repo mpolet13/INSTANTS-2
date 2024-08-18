@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel="stylesheet" href="transaction.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="../index.html"><img src="../image/logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="userDashboard.html"><img src="image/home.png" alt="Home Icon"> Home</a></li>
+                <li><a href="transaction.html" class="active"><img src="image/transaction.png" alt="Transactions Icon"> Transactions</a></li>
+                <li><a href="settings.html"><img src="image/setting.png" alt="Settings Icon"> Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Perform Transactions</h1>
+        </header>
+        <div class="transaction-form">
+            <form action="/submit-transaction" method="POST">
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="from">From Account:</label>
+                    <select id="from" name="from" required>
+                        <option value="paypal">PayPal</option>
+                        <option value="bitcoin">Bitcoin</option>
+                        <option value="payoneer">Payoneer</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="to">To Account:</label>
+                    <select id="to" name="to" required>
+                        <option value="paypal">PayPal</option>
+                        <option value="bitcoin">Bitcoin</option>
+                        <option value="payoneer">Payoneer</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Transaction</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="transaction.js"></script>
+</body>
+</html>
