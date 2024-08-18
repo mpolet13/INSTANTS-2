@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100vh;
+    transition: transform 0.3s ease; /* Transition pour l'affichage */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000; /* Assure que la barre latérale est au-dessus du contenu */
+}
+
+.sidebar.hidden {
+    transform: translateX(-250px); /* Déplace la barre latérale hors de la vue */
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001; /* Assure que le bouton est au-dessus de la barre latérale */
+    display: none; /* Masquer le bouton sur les grands écrans */
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block; /* Affiche le bouton sur les petits écrans */
+    }
+
+    .main-content {
+        margin-left: 0; /* Ajuste le contenu lorsque la barre latérale est masquée */
+    }
+}
+
+.logo {
+    padding: 20px;
+    background-color: #34495e;
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul li a.active {
+    background-color: #3498db;
+}
+
+nav ul li a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% + 20px);
+    height: 100%;
+    background-color: #3498db;
+    z-index: -1;
+    margin-left: -20px;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    overflow: auto;
+    margin-left: 250px; /* Assure que le contenu ne chevauche pas la barre latérale */
+    transition: margin-left 0.3s ease; /* Transition pour le déplacement du contenu */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.settings-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    max-width: 600px;  /* Added max-width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.settings-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.settings-form input[type="email"],
+.settings-form input[type="password"],
+.settings-form input[type="text"] {
+    width: 100%;  /* Ensure input fields take up full width of form */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.settings-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.save-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Add styles for icons */
+nav ul li a img {
+    width: 24px; /* Adjust icon size if needed */
+    height: 24px; /* Adjust icon size if needed */
+    margin-right: 10px; /* Space between icon and text */
+}
