@@ -1,7 +1,34 @@
-function updateConversion(amountId, paymentMethodId, resultId) {
-    
+// Fonction pour récupérer les taux de change depuis l'API Currencylayer
+function fetchExchangeRates() {
     const accessKey = 'bbe23011568578eddfe8b78d390edf80'; // Remplace par ta clé API
     const url = `https://apilayer.net/api/live?access_key=${accessKey}&currencies=EUR,GBP,CAD,PLN&source=USD&format=1`;
+
+    return fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                return data.quotes;
+            } else {
+                console.error('Erreur API:', data.error.info);
+                return null;
+            }
+        })
+        .catch(error => {
+            console.error('Erreur de réseau:', error);
+            return null;
+        });
+}
+
+
+
+
+
+
+function updateConversion(amountId, paymentMethodId, resultId) {
+
+    const accessKey = 'bbe23011568578eddfe8b78d390edf80'; // Remplace par ta clé API
+    const url = `https://apilayer.net/api/live?access_key=${accessKey}&currencies=EUR,GBP,CAD,PLN&source=USD&format=1`;
+
     var amount = document.getElementById(amountId).value;
     var paymentMethod = document.getElementById(paymentMethodId).value;
     var resultField = document.getElementById(resultId);
