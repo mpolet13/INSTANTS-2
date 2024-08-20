@@ -1,4 +1,7 @@
 function updateConversion(amountId, paymentMethodId, resultId) {
+    
+    const accessKey = 'bbe23011568578eddfe8b78d390edf80'; // Remplace par ta clé API
+    const url = `https://apilayer.net/api/live?access_key=${accessKey}&currencies=EUR,GBP,CAD,PLN&source=USD&format=1`;
     var amount = document.getElementById(amountId).value;
     var paymentMethod = document.getElementById(paymentMethodId).value;
     var resultField = document.getElementById(resultId);
