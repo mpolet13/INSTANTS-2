@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="adminDash.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="Image/logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active"><img src="Image/home.png" alt="Home"> Home</a></li>
+                    <li><a href="#"><img src="Image/transaction.png" alt="Transactions"> Transactions</a></li>
+                    <li><a href="#"><img src="Image/setting.png" alt="Settings"> Settings</a></li>
+                    <li><a href="#"><img src="users-icon.png" alt="Users"> Users</a></li>
+                    <li><a href="#"><img src="reports-icon.png" alt="Reports"> Reports</a></li>
+                    <li><a href="#"><img src="logout-icon.png" alt="Logout"> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Admin Dashboard</h1>
+                <button class="logout-btn">Logout</button>
+            </header>
+
+            <div class="section-header">
+                <img src="settings-icon.png" alt="Settings Icon">
+                <h2>Settings</h2>
+            </div>
+
+            <div class="overview">
+                <div class="card">
+                    <h3>Account Settings</h3>
+                    <p>Manage your account details and preferences.</p>
+                </div>
+                <div class="card">
+                    <h3>Payment Settings</h3>
+                    <p>Configure payment methods and fees.</p>
+                </div>
+                <div class="card">
+                    <h3>Notifications</h3>
+                    <p>Set up your notification preferences.</p>
+                </div>
+                <div class="card">
+                    <h3>Security Settings</h3>
+                    <p>Manage security options and password.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="adminDash.js"></script>
+</body>
+</html>
