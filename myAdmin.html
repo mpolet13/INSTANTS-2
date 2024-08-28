@@ -73,7 +73,7 @@
         <form id="loginForm">
             <input type="text" id="adminEmail" placeholder="Email" required>
             <input type="password" id="adminPassword" placeholder="Password" required>
-            <button type="submit">Login</button>
+            <button type="submit" >Login</button>
             <div class="error-message" id="errorMessage"></div>
         </form>
     </div>
@@ -86,7 +86,7 @@
 
             // Validation simplifiée (à remplacer par une vraie validation côté serveur)
             if (email === "admin@example.com" && password === "admin123") {
-                window.location.href = "adminDashboard.html"; // Redirection vers le dashboard admin
+                window.location.href = "adminDashboard/adminDash.html"; // Redirection vers le dashboard admin
             } else {
                 document.getElementById('errorMessage').textContent = "Invalid email or password.";
             }
