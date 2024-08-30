@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="transaction.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="Image/logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="adminDash.html"><img src="Image/home.png" alt="Home"> Home</a></li>
+                    <li><a href="transaction.html" class="active"><img src="Image/transaction.png" alt="Transactions"> Transactions</a></li>
+                    <li><a href="#"><img src="Image/setting.png" alt="Settings"> Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="transaction-list">
+                <h2>Transaction List</h2>
+                <table id="transactionTable">
+                    <!-- Transactions will be populated here -->
+                </table>
+            </div>
+            <div class="transaction-details">
+                <h2>Transaction Details</h2>
+                <div id="detailsContent">
+                    <!-- Transaction details will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="transaction.js"></script>
+</body>
+</html>
