@@ -54,3 +54,52 @@ document.getElementById('payment-method2').addEventListener('change', updateConv
 
 // Récupération des taux de change lors du chargement de la page
 window.onload = fetchExchangeRates;
+
+
+//cookies
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("policy-modal");
+    const acceptBtn = document.getElementById("accept-policy");
+
+    // Show the modal when the page loads
+    modal.style.display = "block";
+
+    // Close the modal when the user clicks "I Agree"
+    acceptBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+});
+
+
+//cookies 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("policy-modal");
+    const privacyPolicyLink = document.getElementById("privacy-policy-link");
+    const closeBtn = document.querySelector(".modal-close");
+    const acceptBtn = document.getElementById("accept-policy");
+
+    // Show the modal when the "Privacy Policy" link is clicked
+    privacyPolicyLink.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        modal.style.display = "block";
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Close the modal when "I Agree" is clicked
+    acceptBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Close the modal when clicking outside the modal content
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+

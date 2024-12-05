@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instant-EX </title>
     <link rel="stylesheet" href="Home.css">
+    
+  
     <script>
       document.addEventListener("DOMContentLoaded", function() {
           const currentPath = window.location.pathname;
@@ -22,7 +24,22 @@
 
 </head> 
 <body>
+  
+  <div id="policy-modal" class="modal">
+    <div class="modal-content">
+        <h2>This website uses cookies</h2>
+        <p>
+          This website uses cookies to improve user experience.
+           By using our website you consent to all cookies in accordance with our Cookie Policy.
+           <a href="policy.html">Read more</a> 
+        </p>
+        <button id="accept-policy" class="btn-accept">I Agree</button>
+
+    </div>
+</div>
+
     <header>
+      
         <div class="auth-buttons">
             <a href="Login.html" class="signIn">Sign In</a>
             <a href="signup.html" class="signUp">Sign Up</a>
@@ -281,17 +298,16 @@ Whichever you choose, the transfer only takes a minute to perform on your INSTAN
 
 
 
-
-
-
     <footer>
         <p>&copy; 2024 INTANT-EX. All rights reserved.</p>
         <ul>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
             <li><a href="#">Terms and Conditions</a></li>
             <li><a href="#">FAQ</a></li>
         </ul>
     </footer>
+
+    
 
     <script src="Home.js"></script>
 </body>
